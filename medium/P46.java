@@ -23,6 +23,7 @@ public class P46 {
     public void recursion(int n, List<Integer> list, int first) {
         // 0到n-1的数已经排列好了，加入结果集
         if (first == n) {
+            // 这里要new一个list，不然res里面的list都是同一个引用，list改变了，res里面的list也会改变
             res.add(new ArrayList(list));
             return;
         }
