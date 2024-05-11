@@ -4,6 +4,7 @@
 public class P48 {
     // 四方位交换来旋转，对左上角操作就可以整个矩阵搞定。注意边界条件
     // n为偶数，取前n/2行，n为奇数，取前(n+1)/2行，所以 j < (n+1)/2 都符合
+    // https://leetcode.cn/problems/rotate-image/solutions/1228078/48-xuan-zhuan-tu-xiang-fu-zhu-ju-zhen-yu-jobi
     public void rotate(int[][] matrix) {
         int n = matrix.length;
         for (int i = 0; i < n / 2; i++) {
