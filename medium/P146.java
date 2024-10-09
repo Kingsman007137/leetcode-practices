@@ -4,7 +4,7 @@
 import java.util.HashMap;
 import java.util.Map;
 
-public class LRUCache {
+public class P146 {
     // 这个解法完全是模仿别人写的，但思路非常清晰
     // 没用各种封装好的类，用到了哈希+循环链表，哨兵结点。
     // 但题目可能想考你用双向链表
@@ -22,7 +22,7 @@ public class LRUCache {
     Node dummpy = new Node(0, 0); // 哨兵结点
     int capacity;
 
-    public LRUCache(int capacity) {
+    public P146(int capacity) {
         this.capacity = capacity;
         // 先造出循环链表
         dummpy.next = dummpy;
