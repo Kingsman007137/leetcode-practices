@@ -16,7 +16,7 @@ public class P42 {
             if (height[left] < height[right]) {
                 ans += leftMax - height[left];
                 ++left;
-            } else { // 逻辑同上，左后呼唤
+            } else { // 逻辑同上，左右互换
                 ans += rightMax - height[right];
                 --right;
             }
