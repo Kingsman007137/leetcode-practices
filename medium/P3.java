@@ -35,12 +35,14 @@ public class P3 {
     //         if (map.containsKey(c)) {
     //             ans = Math.max(ans, i - start);
     //             /* 比如 "abcdefdhjk" 这种，当右指针移动到第二个d的时候，
-    //             左指针可以直接到第一个d的下一个位置，即 e 开始 */
+    //             左指针可以直接到第一个d的下一个位置，即 e 开始.
+    //             但如果重复字符出现在左指针之前，左指针就不能回去了，
+    //             因为中间会有其他重复，所以还是保持为start */
     //             start = Math.max(start, map.get(c) + 1);
     //         }
     //         //即使map里面有c，put方法也会覆盖掉前面的
     //         map.put(c, i);
     //     }
-    //     return Math.max(ans, s.length() - start);
+    //     return Math.max(ans, s.length() - start); // 防止最后一轮是最长或者从头到尾没有重复
     // }
 }
