@@ -17,7 +17,7 @@ public class P560 {
         int ans = 0;
         int sum = 0;
         Map<Integer, Integer> map = new HashMap();
-        //前缀和为0先加上一个，考虑从一开始就有子串和为k的情况
+        //前缀和为0先加上一个，考虑从一开始就有子串和为k的情况，这时sum-k=0
         map.put(0, 1);
         for (int i = 0; i < nums.length; i++) {
             sum += nums[i];
