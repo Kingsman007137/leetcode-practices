@@ -22,7 +22,7 @@ public class P56 {
         // });
 
         //这个是lambda表达式，更简洁，但不太会
-        Arrays.sort(intervals, Comparator.comparingInt(o -> o[0]));
+        Arrays.sort(intervals, (a, b) -> a[0] - b[0]);
 
         List<int[]> res = new ArrayList();
         res.add(intervals[0]);
