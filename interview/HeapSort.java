@@ -17,6 +17,7 @@ public class HeapSort {
         int n = arr.length;
         // 构建最大堆
         for (int i = n / 2 - 1; i >= 0; i--) {
+            // 从第一个非叶子结点从下至上，从右至左调整结构
             heapify(arr, n, i);
         }
         // 逐个取出元素
@@ -27,6 +28,8 @@ public class HeapSort {
     }
 
     // 堆化函数
+    // n - 待排序列尾元素索引
+    // i - 当前节点索引（父节点）
     private static void heapify(int[] arr, int n, int i) {
         int largest = i; // 初始化最大元素为当前节点
         int left = 2 * i + 1; // 左子节点
@@ -41,6 +44,7 @@ public class HeapSort {
             largest = right;
         }
         // 如果最大元素不是当前节点，则交换并递归堆化
+        // 确保以i为根的子树满足大根堆特性
         if (largest != i) {
             swap(arr, i, largest);
             heapify(arr, n, largest);
