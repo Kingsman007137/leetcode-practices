@@ -8,7 +8,8 @@ public class Eratosthenes {
         // 创建一个布尔数组，初始值为true
         boolean[] isPrime = new boolean[n + 1];
         Arrays.fill(isPrime, true); // 将所有元素初始化为true
-
+        isPrime[0] = false; // 0不是素数
+        isPrime[1] = false; // 1不是素数
         // 从2开始筛选
         for (int i = 2; i * i <= n; i++) {
             if (isPrime[i]) { // 如果i是素数
